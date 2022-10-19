@@ -9,9 +9,9 @@
 | jumper:           |  **Jumper()**  |
 | \_word_to_guess:  |   **Word()**   |
 | terminal_service: | **Terminal()** |
-| get_inputs():     |    **None**    |
-| do_updates():     |    **None**    |
-| do_outputs():     |    **None**    |
+| \_get_inputs():   |    **None**    |
+| \_do_updates():   |    **None**    |
+| \_do_outputs():   |    **None**    |
 
 | **Class: Jumper** |             |
 | :---------------- | :---------: |
