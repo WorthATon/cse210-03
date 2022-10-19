@@ -1,8 +1,6 @@
 class Jumper:
 
     def __init__(self, health):
-        
-
        self._health = health
        self._image = [" ___", 
                      "/___\\"
@@ -34,4 +32,3 @@ class Jumper:
 # jumper = Jumper(4)       test code to make sure jumper prints a jumper
 
 # jumper.draw_jumper()
-            
