@@ -37,3 +37,4 @@ class Terminal:
             text (string): The text to display.
         """
         print(text)
+

@@ -1,4 +1,6 @@
 from game.terminal import Terminal
+from game.jumper import Jumper
+from game.word import Word
 
 class Player:
     """The person that handles the game.
