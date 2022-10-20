@@ -4,6 +4,7 @@ class Word:
     """The word to be guessed"""
     
     def __init__(self):
+    
         """Constructs a Word
 
         Args:
