@@ -20,8 +20,8 @@ class Player:
             self (Player): and instance of Player
         """
 
-        self._word_to_guess = ""
-        self._jumper = ""
+        self._word_to_guess = Word()
+        self._jumper = Jumper()
         self._terminal = Terminal()
         
         
@@ -31,9 +31,10 @@ class Player:
         Args:
             self (Player): an instance of Player
         """
+        self._word_to_guess.draw_word()
         self._jumper.draw_jumper()
         
-        while self._jumper.is_alive():
+        while self._jumper.is_alive() and not self._word_to_guess.is_guessed():
             self._get_inputs()
             self._do_updates()
             self._do_outputs()
@@ -45,6 +46,9 @@ class Player:
             self (Player): An instance of Player
         """
         guess = self._terminal.read_text("\nGuess a letter [a-z]: ")
+        
+        if not self._word_to_guess.check_guess(guess):
+            self._jumper.take_health()
     
     def _do_updates(self):
         """Determines if the Jumper has any lives left or if the word has been guessed.
@@ -52,7 +56,7 @@ class Player:
         Args: 
             self (Player): An instance of Player
         """
-        self._jumper.take_health()
+        
     
     def _do_outputs(self):
         """Displays the Jumper's state and the word status.
@@ -64,6 +68,6 @@ class Player:
         self._jumper.draw_jumper()
         
         if not self._jumper.is_alive():
-            self._terminal.write_text("\nGame Over!")
+            self._terminal.write_text("Game Over!")
         elif self._word_to_guess.is_guessed():
             self._terminal.write_text("Word has been guessed! Congratulations!")

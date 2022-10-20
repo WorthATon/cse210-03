@@ -1,7 +1,7 @@
 class Jumper:
 
-    def __init__(self, health):
-       self._health = health
+    def __init__(self):
+       self._health = 4
        self._image = [" ___", 
                      "/___\\"
                     ,"\   / "
@@ -9,19 +9,21 @@ class Jumper:
                     ,  "  0"
                     ,"/ | \\"
                     , " / \\"
-                    ,"^^^^^^^"]
+                    ,"\n^^^^^^^"]
 
     def draw_jumper(self):
+        
+        if self._health < 1:
+            self._image[0] = "  X"
+        
+        print("")
         for layer in self._image: #variable layer declared for each item in list.
             print (layer)
-  
+        print("")
 
     def take_health(self):
         self._health  -= 1
         self._image.pop(0)  #method to remove designated item in a list (default is last item)
-        if self._image[0] =="0": #checks to see if any layers above the head, if not, first layer = head. (game over)
-            self._image[0] ="x"
-
 
     def is_alive(self):
         if self._health == 0:
