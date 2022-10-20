@@ -22,6 +22,7 @@ class Player:
 
         self._word_to_guess = ""
         self._jumper = ""
+        self.health = 5
         self._terminal = Terminal()
         
         
@@ -33,7 +34,7 @@ class Player:
         """
         self._jumper.draw_jumper()
         
-        while self._jumper.is_alive():
+        while Jumper.is_alive(self):
             self._get_inputs()
             self._do_updates()
             self._do_outputs()

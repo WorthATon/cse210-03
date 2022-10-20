@@ -1,7 +1,10 @@
+import random
+
 class Word:
     """The word to be guessed"""
 
     def __init__(self):
+    
         """Constructs a Word
 
         Args:
@@ -12,6 +15,8 @@ class Word:
 
     def draw_word(self):
         """ Gets a random word"""
+        with open("word_list") as file:
+            word =
 
     def check_guess(self):
         """ checks to see if guess is in word. 
