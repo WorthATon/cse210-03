@@ -13,12 +13,13 @@
 | \_do_updates():   |    **None**    |
 | \_do_outputs():   |    **None**    |
 
-| **Class: Jumper** |             |
-| :---------------- | :---------: |
-| \__health_:       |   **Int**   |
-| is_alive():       | **Boolean** |
-| draw_jumper():    |  **None**   |
-| take_health():    |  **None**   |
+| **Class: Jumper** |                 |
+| :---------------- | :-------------: |
+| \__health_:       | **Int**         |
+| \__image_:        | **String List** |
+| is_alive():       | **Boolean**     |
+| draw_jumper():    |  **None**       |
+| take_health():    |  **None**       |
 
 | **Class: Word** |             |
 | :-------------- | :---------: |
